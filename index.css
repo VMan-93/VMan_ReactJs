@@ -4,7 +4,11 @@
     justify-content: space-between;
 }
 .logo {
-    width : 100px
+    width : 100px;
+    height : 100px;
+}
+.logo-container {
+    display : flex
 }
 .nav-items > ul {
     font-size: 20px;
@@ -14,6 +18,11 @@
     padding : 10px;
     margin : 10px;
     list-style-type: none;
+}
+.login-btn {
+    padding : 0 20px;
+    height : 40px;
+    margin : 10px;
 }
 .search {
     padding : 10px;
@@ -38,6 +47,21 @@
 }
 .res-image {
     width : 95%;
-    height : 50%;
+    height : 40%;
     padding : 5px;
+}
+.shimmer-card {
+    width : 15%;
+    height: 400px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin: 5px;
+}
+.shimmer-cards {
+    display : flex;
+    flex-wrap: wrap;
+}
+.shimmer-search {
+    padding : 10px;
+    margin : 10px;
 }
