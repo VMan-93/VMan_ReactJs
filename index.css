@@ -1,3 +1,79 @@
-#header {
-    color: rgb(90, 8, 223);
+.header {
+    display : flex;
+    border : 1px solid orangered;
+    justify-content: space-between;
+}
+.logo {
+    width : 100px;
+    height : 100px;
+}
+.logo-container {
+    display : flex
+}
+.nav-items > ul {
+    font-size: 20px;
+    display : flex;
+}
+.nav-items > ul > li {
+    padding : 10px;
+    margin : 10px;
+    list-style-type: none;
+}
+.login-btn {
+    padding : 0 20px;
+    height : 40px;
+    margin : 10px;
+}
+.search {
+    padding : 10px;
+    margin : 10px;
+}
+.res-container {
+    /* border : 1px solid orangered; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.res-card {
+    border : 1px solid gray;
+    width : 190px;
+    background-color: #f0f0f0;
+    padding : 5px;
+    margin : 10px;
+}
+/* Given by co-pilot when width : 15% used */
+/* .res-container a {
+    display: flex;
+    width : 15%;
+    margin: 5px;       
+    text-decoration: none;
+    color: inherit;   
+}  */
+.res-card:hover {
+    border : 2px solid black;
+    background-color: f0f0f05;
+    cursor: pointer;
+}
+.res-image {
+    width : 95%;
+    height : 40%;
+    padding : 5px;
+}
+.shimmer-card {
+    width : 15%;
+    height: 400px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin: 5px;
+}
+.shimmer-cards {
+    display : flex;
+    flex-wrap: wrap;
+}
+.shimmer-search {
+    padding : 10px;
+    margin : 10px;
+}
+.user-card {
+    border : 1px solid black;
+    padding : 10px;
 }
