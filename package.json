@@ -4,8 +4,8 @@
   "description": "This is Vman ReactJS by VMan",
   "scripts": {
     "test": "jest",
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -17,15 +17,14 @@
     "url": "https://github.com/VMan-93/VMan_ReactJs/issues"
   },
   "homepage": "https://github.com/VMan-93/VMan_ReactJs#readme",
-  "devDependencies": {
-    "parcel": "^2.15.4"
-  },
   "dependencies": {
+    "parcel": "^2.15.4",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router": "^7.7.0"
   },
   "browsersList": [
-	"last 2 Chrome version",
-	"last 2 Firefox version"
-]
+    "last 2 Chrome version",
+    "last 2 Firefox version"
+  ]
 }

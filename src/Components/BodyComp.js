@@ -1,12 +1,13 @@
 import RestaurantCardComp from "./RestaurantCardComp";
 // import { restList } from "../Config/mockData";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import ShimmerComp from "./ShimmerComp";
+import { Link } from "react-router";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const BodyComp = () => {
 
-    // const [stateRestList, setStateRestList] = useState(restList);
+//  const [stateRestList, setStateRestList] = useState(restList);
     const [stateRestList, setStateRestList] = useState([]);
     const [filteredList, setFilteredList] = useState([]);
     const [searchText, setSearchText] = useState("");
@@ -24,6 +25,12 @@ const BodyComp = () => {
         //Optional Chaining - Check
         setStateRestList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    }
+
+    const onlineStatus = useOnlineStatus();
+
+    if (onlineStatus === false) {
+        return ( <h1>Loks like you are offline..! Please check your internet connection</h1>)
     }
 
     return stateRestList.length === 0? <ShimmerComp/> : (
@@ -52,9 +59,15 @@ const BodyComp = () => {
                 }}
                 >Reset</button></div>
             <div className="res-container">
+                {/* {
+                filteredList.map( restaurant => (
+                    <RestaurantCardComp key={restaurant.info.id} resData={restaurant}/>))
+                } */}
                 {
                 filteredList.map( restaurant => (
-                <RestaurantCardComp key={restaurant.info.id} resData={restaurant}/>))
+                <Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id }>
+                    <RestaurantCardComp resData={restaurant}/>
+                </Link>))
                 }
             </div>
         </div>
